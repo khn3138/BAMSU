@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 public class RegisterServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setCharacterEncoding("EUC-KR");
+		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/plain");
 		resp.getWriter().println("<html>");
 		resp.getWriter().println("<body>");
@@ -21,7 +21,7 @@ public class RegisterServlet extends HttpServlet {
 		resp.getWriter().println("<tr><td>카카오톡</td><td><input type='text' name='kaka'></td></tr>");
 		resp.getWriter().println("<tr><td>팀장 여부</td><td><input type='checkbox' name='leader'></td></tr>");
 		resp.getWriter().println("<tr><td>GitHub ID</td><td><input type='text' name='gitid'></td></tr>");
-		resp.getWriter().println("<tr><td><input type='submit' name='commit'></td></tr>");
+		resp.getWriter().println("<tr><td><input type='submit' name='commit' value='등록'></td></tr>");
 		resp.getWriter().println("</form>");
 		resp.getWriter().println("</table>");
 		resp.getWriter().println("</body>");
