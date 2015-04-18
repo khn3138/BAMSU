@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-public class ListView extends HttpServlet {
+public class MyViewMember extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 
@@ -22,8 +22,8 @@ public class ListView extends HttpServlet {
 		for (Member m : memberList) {
 			resp.getWriter().println("<tr>");
 			resp.getWriter().println(
-					"<td>" + "<a href = '/ReadMemberServlet?name="
-							+ m.getName() + "'>" + m.getName() + "</a>"
+					"<td>" + "<a href = '/myupdatemember?key="
+							+ m.getId() + "' name='qwer'>" + m.getName() + "</a>"
 							+ "</td><td>" + m.getNum() + "</td><td>"
 							+ m.getPhone() + "</td><td>" + m.getEmail()
 							+ "</td><td>" + m.getKaka() + "</td><td>"
@@ -34,6 +34,7 @@ public class ListView extends HttpServlet {
 			resp.getWriter().println("</tr>");
 		}
 		resp.getWriter().println("</table>");
+		resp.getWriter().println("<a href='index.html'>처음으로<a>");
 		resp.getWriter().println("</body>");
 		resp.getWriter().println("</HTML>");
 

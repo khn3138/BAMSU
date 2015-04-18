@@ -6,16 +6,16 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
 		<servlet-name>Page1</servlet-name>
-		<servlet-class>kr.ac.shinhan.bamsucsp.RegisterServlet</servlet-class>
+		<servlet-class>kr.ac.shinhan.bamsucsp.MyRegistMember</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Page1</servlet-name>
-		<url-pattern>/regit</url-pattern>
+		<url-pattern>/regit1</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>Page2</servlet-name>
-		<servlet-class>kr.ac.shinhan.bamsucsp.Register2</servlet-class>
+		<servlet-class>kr.ac.shinhan.bamsucsp.MyRegistMember2</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Page2</servlet-name>
@@ -24,7 +24,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
 	<servlet>
 		<servlet-name>Page3</servlet-name>
-		<servlet-class>kr.ac.shinhan.bamsucsp.ListView</servlet-class>
+		<servlet-class>kr.ac.shinhan.bamsucsp.MyViewMember</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Page3</servlet-name>
@@ -36,8 +36,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-class>kr.ac.shinhan.bamsucsp.MyDeleteMember</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Page4</servlet-name>
+		<servlet-name>Page5</servlet-name>
 		<url-pattern>/mydelete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Page5</servlet-name>
+		<servlet-class>kr.ac.shinhan.bamsucsp.MyUpdateMember</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Page5</servlet-name>
+		<url-pattern>/myupdatemember</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>

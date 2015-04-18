@@ -1,8 +1,6 @@
 package kr.ac.shinhan.bamsucsp;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,6 +19,7 @@ public class MyDeleteMember extends HttpServlet {
 		resp.getWriter().println("<h1>");
 		resp.getWriter().println("삭제가 완료되었습니다!");
 		resp.getWriter().println("</h1>");
+		resp.getWriter().println("<a href='index.html'>처음으로<a>");
 		resp.getWriter().println("</body>");
 		resp.getWriter().println("</html>");
 	}

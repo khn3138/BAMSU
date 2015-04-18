@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
-public class Register2 extends HttpServlet {
+public class MyRegistMember2 extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setCharacterEncoding("UTF-8");
@@ -15,8 +15,6 @@ public class Register2 extends HttpServlet {
 		resp.getWriter().println("<h1>");
 		resp.getWriter().println("등록이 완료되었습니다!");
 		resp.getWriter().println("</h1>");
-		resp.getWriter().println("</body>");
-		resp.getWriter().println("</html>");
 		
 		String name = req.getParameter("name");
 		String num = req.getParameter("num");
@@ -41,5 +39,8 @@ public class Register2 extends HttpServlet {
 		resp.getWriter().println("<tr><td>팀장 여부 : " + leader + "</td></tr>");
 		resp.getWriter().println("<tr><td>GitHub 아이디 : " + gitid + "</td></tr>");
 		resp.getWriter().println("</table>");
+		resp.getWriter().println("<a href='index.html'>처음으로<a>");
+		resp.getWriter().println("</body>");
+		resp.getWriter().println("</html>");
 	}
 }
